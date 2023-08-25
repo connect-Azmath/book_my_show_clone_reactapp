@@ -1,10 +1,13 @@
 // import logo from './logo.svg';
+//Routing
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
+//React slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+//Pages
 import HomePage from "./pages/Home.Page";
 import MoviePage from "./pages/Movie.Page";
 import PlayPage from "./pages/Play.Page";
