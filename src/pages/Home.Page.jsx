@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DefaultlayoutHOC from "../layout/Default.layout";
 // DefaultlayoutHOC
 
@@ -7,12 +7,22 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.component";
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.Component";
 
+//Axios
+import axios from "axios";
 
 const HomePage =() => {
     const [recommendedMovies, setRecommendedMovies] = useState([]);
     const [premierMovies, setPremierMovies] = useState([]);
     const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
-        
+    
+    useEffect(() => {
+        const requestTopRatedMovies = async () => {
+            const getTopRatedMovies = await axios.get('/3/movies/top_rated');
+            setRecommendedMovies(getTopRatedMovies.data.results);
+        };
+        setRecommendedMovies();
+    }, [])
+
         return  (
             <>
                 <HeroCarousel></HeroCarousel>
@@ -23,7 +33,7 @@ const HomePage =() => {
                 <div className="container mx-auto px-4 md:px-12 my-8">
                     <PosterSlider 
                     title="Recommended Movies"
-                    subject="List of Recommended Movies"
+                    subtitle="List of Recommended Movies"
                     posters={recommendedMovies}
                     isDark={false}></PosterSlider>
                     
@@ -35,7 +45,7 @@ const HomePage =() => {
                     </div>
                      <PosterSlider 
                     title="Recommended Movies"
-                    subject="Brand new Release on Tuesday"
+                    subtitle="Brand new Release on Tuesday"
                     posters={premierMovies}
                     isDark={true}>
                      </PosterSlider>
@@ -46,7 +56,7 @@ const HomePage =() => {
                 <div className="container mx-auto px-4 md:px12 my-8 flex flex-col gap-3">
                 <PosterSlider 
                     title="Online Sreaming Events"
-                    subject="Online Sreaming Events"
+                    subtitle="Online Sreaming Events"
                     posters={onlineStreamEvents}
                     isDark={false}>
                      </PosterSlider>
