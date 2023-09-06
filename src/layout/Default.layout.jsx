@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar.Compnent";
+import Navbar from "../components/Navbar/Navbar.Compnent";
 
-const DefaultlayoutHOC =(Component) => 
+const DefaultlayoutHoc =(Component) => 
 ({...props}) =>  {
     return (
     <div>
-        <h2>Hi i am from DefaultlayoutHOC </h2>
+        {/* <h2>Hi i am from DefaultlayoutHOC </h2> */}
         <Navbar></Navbar>
         <Component {...props} />
         <div>Footer</div>
@@ -14,4 +14,4 @@ const DefaultlayoutHOC =(Component) =>
 }
 
 
-export default DefaultlayoutHOC;
+export default DefaultlayoutHoc;
