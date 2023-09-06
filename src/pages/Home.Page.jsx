@@ -6,7 +6,7 @@ import DefaultLayoutHoc from "../layout/Default.layout";
 // Components
 import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.component";
-import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.Component";
+import EnterainmentCardSlider from "../components/Entertainment/EntertainmentCard.Component";
 
 // axios
 import axios from "axios";
@@ -18,18 +18,35 @@ const HomePage = () => {
 
     useEffect(()=> {
         const requestTopRatedMovies = async () => {
-            const getTopRatedMovies = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=c54ab2f18bdf2fcbf4283c5aa5ab488c');
+            const getTopRatedMovies = await axios.get('/movie/top_rated');
             setRecommendedMovies(getTopRatedMovies.data.results);
         };
         requestTopRatedMovies();
     }, [])
 
+
+       useEffect(()=> {
+        const requestUpcomingMovies = async () => {
+            const getUpcomingMovies = await axios.get('/movie/upcoming');
+            setPremierMovies(getUpcomingMovies.data.results);
+        };
+        requestUpcomingMovies();
+    }, [])
+
+
+       useEffect(()=> {
+        const requestOnlineStreamMovies = async () => {
+            const getOnlineStreamMovies = await axios.get('/movie/upcoming');
+            setOnlineStreamEvents(getOnlineStreamMovies.data.results);
+        };
+        requestOnlineStreamMovies();
+    }, [])
         return(
            <>
             <HeroCarousel />
             <div className="container mx-auto px-4 md:px-12 my-8">
                 <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3 ">The Best of Entertainment</h1>
-                <EntertainmentCardSlider />
+                <EnterainmentCardSlider />
             </div>
             <div className="container mx-auto px-4 md:px-12 my-8">
                 <PosterSlider 

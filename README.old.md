@@ -10,6 +10,9 @@ NPM Axios - https://www.npmjs.com/package/axios
 Axios - https://axios-http.com/docs/example
 HeadlessUI - https://headlessui.com/react/popover#installation
 React-Icons - https://react-icons.github.io/react-icons/
+Tailwind Shades - https://www.tailwindshades.com/#color=0%2C0%2C0&step-up=11&step-down=0&hue-shift=-69&name=black&base-stop=5&v=1&overrides=e30%3D
+MovieDb - https://www.themoviedb.org/
+RazorPay - Test - https://razorpay.com/docs/payments/payments/test-card-details/
 
 
 

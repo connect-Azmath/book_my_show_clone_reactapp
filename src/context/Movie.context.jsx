@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-export const MovieContext =  createContext;
+export const MovieContext =  createContext();
 
 const MovieProvider = ({children}) => {
 
@@ -13,6 +13,8 @@ const MovieProvider = ({children}) => {
     })
 
     return <MovieContext.Provider value={{movie, setMovie}}> {children} </MovieContext.Provider>
-}
+};
 
 export default MovieProvider;
+  
+ 
