@@ -9,7 +9,7 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 import MovieHero from "../components/MovieHero/MovieHero.component";
 import Cast from "../components/Cast/Cast.component";
 
-// useContext 
+// useContext
 
 const MoviePage = () => {
   const { id } = useParams();
