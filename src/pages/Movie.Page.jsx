@@ -183,10 +183,10 @@ const MoviePage = () => {
                 image={castData.profile_path}
                 castName={castData.original_name}
                 role={castData.character}
-              />;
+              />
             })}
           </Slider>
-        </div>
+        </div>                        
 
         <div className="my-8">
           <hr />

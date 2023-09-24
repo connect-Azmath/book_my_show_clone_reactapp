@@ -12,4 +12,5 @@ const Cast = (props) => {
 </div>
 };
 
-export default Cast;
+export default Cast;   
+ 

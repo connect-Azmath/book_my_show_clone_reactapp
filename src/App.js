@@ -15,10 +15,12 @@ import PlayPage from "./pages/Play.Page";
 import Sign_up from "./pages/Sign_up.Page";
 import axios from "axios";
 
+var key="4050659142c78941bf2dee9c4f9a0f4f";
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 axios.defaults.params = {};
-axios.defaults.params["api_key"] = process.env.API_KEY;
-// axios.defaults.params["api_key"] = "Use my api_Key here directly for the API functioning - 401 will not be displayed";
+axios.defaults.params["api_key"] = key;
+//process.env.key;
+// axios.defaults.params["api_key"] = "Use proper api_Key here directly for the API functioning - 401 will not be displayed";
 
 function App() {
   return (
