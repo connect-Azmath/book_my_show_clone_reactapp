@@ -9,10 +9,11 @@ const MovieLayoutHoc =
         {/* <h2>Hi i am from MovielayoutHOC </h2> */}
         <MovieNavbar></MovieNavbar>
         <Component {...props} />
-        <div>
-          <hr />
-          {/* Footer */}
-        </div>
+        {/* <div> 
+          Footer
+        </div> */}
+        <hr />
+        <div align="center"> ********* Footer  *********** </div>
       </div>
     );
   };

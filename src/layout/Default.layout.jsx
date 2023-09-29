@@ -7,8 +7,10 @@ const DefaultlayoutHoc =(Component) =>
     <div>
         {/* <h2>Hi i am from DefaultlayoutHOC </h2> */}
         <Navbar></Navbar>
-        <Component {...props} />
-        <div>Footer</div>
+        <Component {...props} /> 
+        {/* <div> Footer</div> */}
+        <hr />
+        <div align="center"> ********* Footer  *********** </div>
     </div>
     )
 }
