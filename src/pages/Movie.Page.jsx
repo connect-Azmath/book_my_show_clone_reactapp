@@ -69,7 +69,7 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-        },
+        }
       },
       {
         breakpoint: 600,
@@ -77,16 +77,16 @@ const MoviePage = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
-        },
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
 
   const settings = {
@@ -102,7 +102,7 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-        },
+        }
       },
       {
         breakpoint: 600,
@@ -110,16 +110,16 @@ const MoviePage = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
-        },
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
 
   return (
@@ -221,7 +221,7 @@ const MoviePage = () => {
         </div>
       </div>
     </>
-  );
+  )
 };
 
 export default MovieLayoutHoc(MoviePage);
